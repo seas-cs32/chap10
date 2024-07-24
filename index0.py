@@ -12,7 +12,7 @@ MIN_LEN = 4           # don't index any words shorter than 5 chars
 UNIT_PAT = ''         # for pages in CatInTheHat.txt
 UNIT_CNT_INIT = 1
 '''
-UNIT_PAT = 'CHAPTER'  # for chapters in JustDavid.txt
+UNIT_PAT = 'CHAPTER'  # for chapters in JustDavid-chaps.txt
 UNIT_CNT_INIT = 0
 '''
 
@@ -57,8 +57,8 @@ def main():
         with open(sys.argv[1]) as f:
             txt = f.read()
     else:
-        print("Usage: python3 buildindex.py book.txt")
-        print("   Or: python3 buildindex.py < book.txt")
+        print("Usage: python3 index0.py book.txt")
+        print("   Or: python3 index0.py < book.txt")
         sys.exit()
 
     build_index(txt)

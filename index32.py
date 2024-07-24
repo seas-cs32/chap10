@@ -12,7 +12,7 @@ MIN_LEN = 4           # don't index any words shorter than 5 chars
 UNIT_PAT = ''         # for pages in CatInTheHat.txt
 UNIT_CNT_INIT = 1
 '''
-UNIT_PAT = 'CHAPTER'  # for chapters in JustDavid.txt
+UNIT_PAT = 'CHAPTER'  # for chapters in JustDavid-chaps.txt
 UNIT_CNT_INIT = 0
 '''
 

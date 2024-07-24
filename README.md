@@ -1,6 +1,7 @@
 This directory contains everything needed for
 **Chapter 10 (Build an Index)** in
-*Computational Thinking and Problem Solving*.
+[*Computational Thinking and Problem Solving (CTPS)*](https://profsmith89.github.io/ctps/ctps.html)
+by Michael D. Smith.
 
 `rk_strmatch.py`: A Python implementation of Rabin-Karp string matching.
 
