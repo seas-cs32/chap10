@@ -8,7 +8,7 @@ import string
 # define this information in a configuration file, which would be a better way
 # to have our user infrequently change what are relatively stable constants than
 # asking this user to edit our scripts.
-MIN_LEN = 4           # don't index any words shorter than 5 chars
+MIN_LEN = 4           # don't index any words shorter than 4 chars
 UNIT_PAT = ''         # for pages in CatInTheHat.txt
 UNIT_CNT_INIT = 1
 '''

@@ -1,9 +1,9 @@
 ### chap10/simple_hash.py
 
-def simple_hash(s):
+def simple_hash(text):
     num = 0
-    for i in range(len(s)):
-        num = num * 256 + ord(s[i])
+    for i in range(len(text)):
+        num = num * 256 + ord(text[i])
     return num
 
 def update_hash(text, s, m, num):
@@ -23,8 +23,8 @@ def update_hash(text, s, m, num):
 def main():
     # Demonstration code for the functions above
 
-    s = '1983'
-    print(f'{s} = {simple_hash(s)}')
+    text = '1983'
+    print(f'{text} = {simple_hash(text)}')
 
     text = '77719834777'
     s = 3    # Pretend we're in the middle of the match loop
@@ -39,8 +39,8 @@ def main():
     num = simple_hash(text[s:s+m])
     print(f'{text[s:s+m]} = {num}')
 
-    s = 'one thousand nine hundred and eighty-three'
-    print(f'{s} = {simple_hash(s)}')
+    text = 'one thousand nine hundred and eighty-three'
+    print(f'{text} = {simple_hash(text)}')
 
 if __name__ == '__main__':
     main()
