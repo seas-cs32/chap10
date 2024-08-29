@@ -38,13 +38,13 @@ def update_index(d, wordlist, unitno):
                 d[word].append(unitno)
         else:
             d[word] = [unitno]
-
+    
     return d
 
 def build_index(txt):
     # Start with an empty dictionary
     d = {}
-
+    
     # Iterate through each line in book watching for book unit boundaries
     unitno = UNIT_CNT_INIT
     for line in txt.split('\n'):
@@ -52,7 +52,7 @@ def build_index(txt):
             unitno += 1
         else:
             d = update_index(d, get_wordlist(line), unitno)
-
+    
     # Print out the index
     print(d)
 
@@ -67,7 +67,7 @@ def main():
         print("Usage: python3 index1.py book.txt")
         print("   Or: python3 index1.py < book.txt")
         sys.exit()
-
+    
     build_index(txt)
 
 if __name__ == '__main__':
