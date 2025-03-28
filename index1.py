@@ -45,7 +45,7 @@ def build_index(txt):
     # Start with an empty dictionary
     d = {}
     
-    # Iterate through each line in book watching for book unit boundaries
+    # Iterate through each line in book watching for book-unit boundaries
     unitno = UNIT_CNT_INIT
     for line in txt.split('\n'):
         if found_new_unit(line):
