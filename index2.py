@@ -3,11 +3,11 @@ import sys
 import re
 import string
 
-# Instead of bothering to ask the user for this information on each run of the
-# program, we'll just make them global constants.  In production code, we'd
-# define this information in a configuration file, which would be a better way
-# to have our user infrequently change what are relatively stable constants than
-# asking this user to edit our scripts.
+# Instead of asking the user for this information on each run of
+# the program, we'll make them global constants. In production
+# code, we'd define this information in a configuration file,
+# which is a better way to have our user infrequently change what
+# are relatively stable constants.
 MIN_LEN = 4           # don't index any words shorter than 4 chars
 UNIT_PAT = ''         # for pages in CatInTheHat.txt
 UNIT_CNT_INIT = 1
@@ -19,8 +19,8 @@ UNIT_CNT_INIT = 0
 # The magic function that turns a line into a wordlist
 def get_wordlist(line):
     line = line.replace('--', ' ')
-    return [re.sub('^[{0}]+|[{0}]+$'.format(string.punctuation), '', w)
-            for w in line.split()]
+    return [re.sub('^[{0}]+|[{0}]+$'.format(string.punctuation),
+                   '', w) for w in line.split()]
 
 # An unfortunately difficult check because of empty lines as
 # a unit break in CatInTheHat.txt
@@ -49,7 +49,7 @@ def build_index(txt):
     # Start with an empty dictionary
     d = {}
     
-    # Iterate through each line in book watching for book-unit boundaries
+    # Iterate through each line watching for book-unit boundaries
     unitno = UNIT_CNT_INIT
     for line in txt.split('\n'):
         if found_new_unit(line):

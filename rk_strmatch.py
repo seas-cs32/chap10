@@ -21,14 +21,14 @@ def rk_strmatch(t, p):
     d = 256    # number of character encodings in ASCII
     q = 65537  # a prime number
 
-    # Compute the hash value of a 1 in the high-order position (i.e.,
-    # m-1th position), where digits have radix d
+    # Compute the hash value of a 1 in the high-order position
+    # (i.e., m-1th position), where digits have radix d
     hh = 1
     for i in range(m - 1):
         hh = (hh * d) % q
 
-    # Calculate the hash values for p and t[0:m], since the matching
-    # loop needs these values as it starts
+    # Calculate the hash values for p and t[0:m], since the
+    # matching loop needs these values as it starts
     hp = 0
     ht = 0
     for i in range(m):
